@@ -7,12 +7,12 @@ import { User } from './entities/User';
 const config: Options = {
     migrations: {
         path: path.join(__dirname, './migrations'),
-        glob: "/^[\w-]+\d+\.[tj]s$/",
+        glob: "!(*.d).{js,ts}",
     },
     entities: [Post, User],
     dbName: "lireddit",
     type: "postgresql",
-    debug : !__prod__,
+    debug: !__prod__,
     password: "riktah",
     allowGlobalContext: true
 };
