@@ -9,7 +9,7 @@ export class PostResolver {
         return em.find(Post, {})
     }
 
-    @Query(() => Post, {nullable: true})
+    @Query(() => Post, { nullable: true })
     post(
         @Arg('id') id: number,
         @Ctx() { em }: MyContext
@@ -22,18 +22,18 @@ export class PostResolver {
         @Arg('title') title: string,
         @Ctx() { em }: MyContext
     ): Promise<Post | null> {
-        const post = em.create(Post, {title})
+        const post = em.create(Post, { title })
         await em.persistAndFlush(post)
         return post
     }
 
-    @Mutation(() => Post, {nullable: true})
+    @Mutation(() => Post, { nullable: true })
     async updatePost(
         @Arg('id') id: number,
-        @Arg('title', () => String, {nullable: true}) title: string,
+        @Arg('title', () => String, { nullable: true }) title: string,
         @Ctx() { em }: MyContext
     ): Promise<Post | null> {
-        const post = await em.findOne(Post, {id})
+        const post = await em.findOne(Post, { id })
         if (!post) {
             return null
         }
