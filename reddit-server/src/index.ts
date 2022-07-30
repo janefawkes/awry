@@ -13,7 +13,6 @@ import { UserResolver } from "./resolvers/user";
 import Redis from "ioredis";
 import session from "express-session";
 import connectRedis from "connect-redis";
-import { MyContext } from "./types";
 
 const main = async () => {
   const orm = await MikroORM.init(config);
@@ -31,7 +30,7 @@ const main = async () => {
   app.use(
     cors({
       credentials: true,
-      origin: ["https://studio.apollographql.com", "http://localhost:4000/graphql"]
+      origin: ["https://studio.apollographql.com", "http://localhost:4000/graphql", "http://localhost:3000"]
     }),
     session({
       name: "qid",
@@ -56,7 +55,7 @@ const main = async () => {
       resolvers: [HelloResolver, PostResolver, UserResolver],
       validate: false
     }),
-    context: ({ req, res }): MyContext => ({ em: orm.em, req, res })
+    context: ({ req, res }) => ({ em: orm.em, req, res })
   })
 
   await apolloServer.start();
