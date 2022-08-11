@@ -25,12 +25,12 @@ const main = async () => {
 
   // await redisClient.connect()
   app.set("trust proxy", 1);
-  app.set("Access-Control-Allow-Origin", "https://studio.apollographql.com");
+  app.set("Access-Control-Allow-Origin", "*");
   app.set("Access-Control-Allow-Credentials", true);
   app.use(
     cors({
       credentials: true,
-      origin: ["https://studio.apollographql.com", "http://localhost:4000/graphql", "http://localhost:3000"]
+      origin: ["https://studio.apollographql.com", "http://localhost:4000/graphql", "http://localhost:3000", "https://graphiql-online.com"]
     }),
     session({
       name: "qid",

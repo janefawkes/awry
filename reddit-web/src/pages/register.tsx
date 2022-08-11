@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form } from "formik"
+import { Formik, Form, setErrors } from "formik"
 import { Box, Button } from "@chakra-ui/react";
 import { Wrapper } from "../components/Wrapper";
 import { InputField } from "../components/InputField";
@@ -27,10 +27,15 @@ const Register: React.FC<registerProps> = ({ }) => {
     return (
         <>
             <Wrapper variant="small">
-                <Formik initialValues={{ username: "", password: "" }}
-                    onSubmit={async (values) => {
-                        console.log(values)
+                <Formik
+                    initialValues={{ username: "", password: "" }}
+                    onSubmit={async (values, { setErrors }) => {
                         const response = await register(values)
+                        // if (response.data?.register.errors) {
+                        //     setErrors({
+                        //         username: "uwu"
+                        //     })
+                        // }
                     }}
                 >
                     {({ isSubmitting }) => (
