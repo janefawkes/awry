@@ -1799,13 +1799,21 @@
   dependencies:
     "@types/node" "*"
 
-"@urql/core@^2.6.1":
-  "integrity" "sha512-gYrEHy3tViJhwIhauK6MIf2Qp09QTsgNHZRd0n71rS+hF6gdwjspf1oKljl4m25+272cJF7fPjBUGmjaiEr7Kg=="
-  "resolved" "https://registry.npmjs.org/@urql/core/-/core-2.6.1.tgz"
-  "version" "2.6.1"
+"@urql/core@^3.0.0", "@urql/core@>=3.0.0":
+  "integrity" "sha512-VMnAx1JsV32XjuCQVHHeq2BAn39XBSr6qEJd3xSE3Gwrc2NGndTZeFd6loZKmYF9XTHmvj8YbY2BFfHW7nGbmg=="
+  "resolved" "https://registry.npmjs.org/@urql/core/-/core-3.0.1.tgz"
+  "version" "3.0.1"
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.1"
-    "wonka" "^4.0.14"
+    "wonka" "^6.0.0"
+
+"@urql/exchange-graphcache@^5.0.0":
+  "integrity" "sha512-REUA1SBrPQukxHq+IpBrLihSAW9J/QOOK3XPCfO5wtkg9FaBp3VV0MlOL/CItZYvfVvgnfLWMzwIDAcUCDZmgA=="
+  "resolved" "https://registry.npmjs.org/@urql/exchange-graphcache/-/exchange-graphcache-5.0.0.tgz"
+  "version" "5.0.0"
+  dependencies:
+    "@urql/core" ">=3.0.0"
+    "wonka" "^6.0.0"
 
 "@whatwg-node/fetch@^0.2.3", "@whatwg-node/fetch@^0.2.4":
   "integrity" "sha512-KyUD1Vx9TpdTTlM01aXOx1NED93C33cOT/5RyCqVL6H/srGTU1hlLacOLgmYSLNzkEVerVfhb7Bd6IxiI7JziA=="
@@ -4184,13 +4192,13 @@
   dependencies:
     "tslib" "^2.0.3"
 
-"urql@^2.2.3":
-  "integrity" "sha512-XMkSYJKW9s4ZlbSuxcUz3fTBIykOn0sGileRXQeyZpaRBXJPVz5saSY05k7jdefNxShZtTI+/nr7PYUWQertfg=="
-  "resolved" "https://registry.npmjs.org/urql/-/urql-2.2.3.tgz"
-  "version" "2.2.3"
+"urql@^3.0.1":
+  "integrity" "sha512-mAV3qKMp84i8U/bq5DIXjfyeRVyOfF6+iNT2DlLUNsd3w5UKfJHmvYfEPUuV5MJxekT911yoIc4za+/Qq2TPHA=="
+  "resolved" "https://registry.npmjs.org/urql/-/urql-3.0.1.tgz"
+  "version" "3.0.1"
   dependencies:
-    "@urql/core" "^2.6.1"
-    "wonka" "^4.0.14"
+    "@urql/core" "^3.0.0"
+    "wonka" "^6.0.0"
 
 "use-callback-ref@^1.3.0":
   "integrity" "sha512-3FT9PRuRdbB9HfXhEq35u4oZkvpJ5kuYbpqhCfmiZyReuRgpnhDlbr2ZEnnuS0RrJAPn6l23xjFg9kpDM+Ms7w=="
@@ -4278,10 +4286,10 @@
   "resolved" "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz"
   "version" "2.0.0"
 
-"wonka@^4.0.14":
-  "integrity" "sha512-U0IUQHKXXn6PFo9nqsHphVCE5m3IntqZNB9Jjn7EB1lrR7YTDY3YWgFvEvwniTzXSvOH/XMzAZaIfJF/LvHYXg=="
-  "resolved" "https://registry.npmjs.org/wonka/-/wonka-4.0.15.tgz"
-  "version" "4.0.15"
+"wonka@^6.0.0":
+  "integrity" "sha512-TEiIOqkhQXbcmL1RrjxPCzTX15V5FSyJvZRSiTxvgTgrJMaOVKmzGTdRVh349CfaNo9dsIhWDyg1/GNq4NWrEg=="
+  "resolved" "https://registry.npmjs.org/wonka/-/wonka-6.0.0.tgz"
+  "version" "6.0.0"
 
 "wrap-ansi@^6.2.0":
   "integrity" "sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA=="
