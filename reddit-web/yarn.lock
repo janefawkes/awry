@@ -3345,6 +3345,13 @@
   "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.3.4.tgz"
   "version" "3.3.4"
 
+"next-urql@^4.0.0":
+  "integrity" "sha512-c/dLhNg9bP+ku7GJDAYlsNnKEazrjcDnRx8/mBsGnjMj4c0yM+p2PBGbirWXkYL7Z2ogOHnSqHTt8swB9sJvQg=="
+  "resolved" "https://registry.npmjs.org/next-urql/-/next-urql-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "react-ssr-prepass" "^1.4.0"
+
 "next@latest":
   "integrity" "sha512-zAYFY45aBry/PlKONqtlloRFqU/We3zWYdn2NoGvDZkoYUYQSJC8WMcalS5C19MxbCZLUVCX7D7a6gTGgl2yLg=="
   "resolved" "https://registry.npmjs.org/next/-/next-12.2.2.tgz"
@@ -3686,10 +3693,20 @@
     "use-callback-ref" "^1.3.0"
     "use-sidecar" "^1.1.2"
 
-"react-is@^16.13.1", "react-is@^16.7.0":
+"react-is@^16.13.1":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
+
+"react-is@^16.7.0":
+  "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
+  "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
+  "version" "16.13.1"
+
+"react-is@^18.2.0":
+  "integrity" "sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w=="
+  "resolved" "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
+  "version" "18.2.0"
 
 "react-remove-scroll-bar@^2.3.3":
   "integrity" "sha512-i9GMNWwpz8XpUpQ6QlevUtFjHGqnPG4Hxs+wlIJntu/xcsZVEpJcIV71K3ZkqNy2q3GfgvkD7y6t/Sv8ofYSbw=="
@@ -3709,6 +3726,11 @@
     "tslib" "^2.1.0"
     "use-callback-ref" "^1.3.0"
     "use-sidecar" "^1.1.2"
+
+"react-ssr-prepass@^1.4.0":
+  "integrity" "sha512-yFNHrlVEReVYKsLI5lF05tZoHveA5pGzjFbFJY/3pOqqjGOmMmqx83N4hIjN2n6E1AOa+eQEUxs3CgRnPmT0RQ=="
+  "resolved" "https://registry.npmjs.org/react-ssr-prepass/-/react-ssr-prepass-1.5.0.tgz"
+  "version" "1.5.0"
 
 "react-style-singleton@^2.2.1":
   "integrity" "sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g=="
@@ -4192,7 +4214,7 @@
   dependencies:
     "tslib" "^2.0.3"
 
-"urql@^3.0.1":
+"urql@^3.0.0", "urql@^3.0.1":
   "integrity" "sha512-mAV3qKMp84i8U/bq5DIXjfyeRVyOfF6+iNT2DlLUNsd3w5UKfJHmvYfEPUuV5MJxekT911yoIc4za+/Qq2TPHA=="
   "resolved" "https://registry.npmjs.org/urql/-/urql-3.0.1.tgz"
   "version" "3.0.1"
