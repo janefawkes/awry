@@ -2,7 +2,7 @@ require('dotenv').config({ path: '../env.d.ts' });
 var cors = require('cors')
 
 import { MikroORM } from "@mikro-orm/core"
-import { __prod__ } from "./constants"
+import { __prod__ } from "../src/constants"
 import config from "./mikro-orm.config"
 import express from "express"
 import { ApolloServer } from 'apollo-server-express'
