@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+.nav-loggedOut {
+    display: flex;
+    background-color: #15151B;
+    height: 6vh;
+    width: 100vw;
+}
+
+.nav-link {
+    border-radius: 50px;
+    border: none;
+    width: 7vw;
+    background-color: #6333FF;
+    cursor: pointer;
+    outline: none;
+    padding: 1vw;
+}
+
+.sign-in {
+    background: transparent;
+    border: 2px solid #6333FF;
+}

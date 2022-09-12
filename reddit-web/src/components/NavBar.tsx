@@ -1,7 +1,9 @@
-import { Box, Button, Flex, Link } from "@chakra-ui/react";
 import React from "react";
 import NextLink from 'next/link'
 import { useLogoutMutation, useMeQuery } from "../generated/graphql";
+import Head from "next/head";
+
+import style from "../styles/NavBar.module.scss"
 
 interface NavBarProps { }
 
@@ -15,36 +17,43 @@ export const NavBar: React.FC<NavBarProps> = ({ }) => {
     } else if (!data?.me) {
         body = (
             <>
-                <NextLink href="/login">
-                    <Link color="white" mr={2}>login</Link>
-                </NextLink>
-                <NextLink href="/register">
-                    <Link color="white">register</Link>
-                </NextLink>
+                <nav className={style['nav-loggedOut']}>
+                    <NextLink href="/login">
+                        {/* <Link color="white" mr={2}>login</Link> */}
+                        <button className={style["nav-link sign-in"]}>Sign in</button>
+                    </NextLink>
+                    <NextLink href="/register">
+                        {/* <Link color="white">register</Link> */}
+                        <button className={style["nav-link"]}>Sign up</button>
+                    </NextLink>
+                </nav>
             </>
         )
     } else {
         body = (
-            <Flex>
-                <Box mr={2}>{data.me.username}</Box>
-                <Button
+            <nav>
+                <div>{data.me.username}</div>
+                <button
                     onClick={() => {
-                        logout()
+                        confirm("Are you sure you want to logout?") ? logout() : null
                     }}
-                    isLoading={logoutFetching}
-                    variant='link'
+                // isLoading={logoutFetching}
+                // variant='link'
                 >
                     logout
-                </Button>
-            </Flex>
+                </button>
+            </nav>
         )
     }
 
     return (
-        <Flex bg='tan' p={4}>
-            <Box ml={'auto'}>
+        <>
+            <Head>
+                <title>uwu</title>
+            </Head>
+            <div>
                 {body}
-            </Box>
-        </Flex>
+            </div>
+        </>
     )
 }

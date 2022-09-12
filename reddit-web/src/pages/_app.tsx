@@ -1,15 +1,14 @@
-import { ChakraProvider } from '@chakra-ui/react'
-
 import { AppProps } from 'next/app'
-import { NavBar } from '../components/NavBar'
-import theme from '../theme'
+import { usePostsQuery } from '../generated/graphql'
+// import theme from '../theme'
+
+import "../styles/global.scss"
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [{ data }] = usePostsQuery()
   return (
     <>
-      <ChakraProvider theme={theme}>
-        <NavBar />
-      </ChakraProvider>
+      <Component {...pageProps} />
     </>
   )
 }
