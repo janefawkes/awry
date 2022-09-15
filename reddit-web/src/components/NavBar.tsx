@@ -4,12 +4,15 @@ import { useLogoutMutation, useMeQuery } from "../generated/graphql";
 import Head from "next/head";
 
 import style from "../styles/NavBar.module.scss"
+import { IsServer } from "../utils/isServer";
 
 interface NavBarProps { }
 
 export const NavBar: React.FC<NavBarProps> = ({ }) => {
     const [{ fetching: logoutFetching }, logout] = useLogoutMutation()
-    const [{ data, fetching }] = useMeQuery()
+    const [{ data, fetching }] = useMeQuery({
+        pause: IsServer()
+    })
     let body = null
 
     if (fetching) {
@@ -20,7 +23,7 @@ export const NavBar: React.FC<NavBarProps> = ({ }) => {
                 <nav className={style['nav-loggedOut']}>
                     <NextLink href="/login">
                         {/* <Link color="white" mr={2}>login</Link> */}
-                        <button className={style["nav-link sign-in"]}>Sign in</button>
+                        <button className={style["nav-link"]}>Sign in</button>
                     </NextLink>
                     <NextLink href="/register">
                         {/* <Link color="white">register</Link> */}
