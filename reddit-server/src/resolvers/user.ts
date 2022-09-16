@@ -123,13 +123,15 @@ export class UserResolver {
     logout(@Ctx() { req, res }: MyContext) {
         return new Promise((resolve) =>
             req.session.destroy((err) => {
-                res.clearCookie('qid')
+                res.clearCookie('qid');
                 if (err) {
-                    resolve(false)
-                    return
+                    console.log(err);
+                    resolve(false);
+                    return;
                 }
-                resolve(true)
+
+                resolve(true);
             })
-        )
+        );
     }
 }
