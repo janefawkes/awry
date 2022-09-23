@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import App from "./pages/App"
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom"
 import Login from "./pages/login";
+import Register from "./pages/register";
 
 // const Index = () =>
 //   <>
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
     {
         path: "/login",
         element: <Login />,
-    }
+    },
+    {
+        path: "/register",
+        element: <Register />,
+    },
 ]);
 
 ReactDOM.render(
